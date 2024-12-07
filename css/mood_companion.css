@@ -1,0 +1,113 @@
+/* General styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #9e97a5, #c1d2d2, #8d6a7d, #f2eee8, #7b93a5);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+}
+
+/* Styling for the container */
+.mood-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #292928;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #9e97a5, #c1d2d2);
+}
+
+/* Styling for the heading */
+h2 {
+    color: #0f0e0e;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+/* Style for mood buttons */
+.mood-btn {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.mood-btn:hover {
+    background-color: #ff2a4b;
+    transform: scale(1.05); /* Slightly grow the button when hovered */
+}
+
+/* .response {
+    display: none;
+    font-size: 20px;
+    margin-top: 20px;
+    color: #666;
+    font-style: italic;
+    animation: fadeIn 1s ease;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+/* Show button shadow on hover */
+.mood-btn:focus {
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.4);
+     transform: none;
+}
+
+.response {
+    display: none; /* Hide response by default */
+    font-size: 18px;
+    margin-top: 10px;
+    color: #666;
+    font-style: italic;
+    animation: fadeIn 1s ease;
+}
+
+/* Animation for response fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.mood-btn:hover + .response {
+    display: block; /* Show the response when the button is hovered */
+}
+
+/* Specific button colors */
+#tease-btn {
+    background-color: #f5b7b1;
+}
+
+#romantic-btn {
+    background-color: #ff69b4;
+}
+
+#jealous-btn {
+    background-color: #6c757d;
+}
+
+#dreamy-btn {
+    background-color: #a2d9ce;
+}
+
+#cheesy-btn {
+    background-color: #f4d03f;
+}
+
+#playful-btn {
+    background-color: #f39c12;}
+
+    #annoyed-btn {
+        background-color: #e74c3c;
+    }
