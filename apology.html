@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgive Me? I Didn’t Mean To, But I Promise It’s From the Heart Now 😘🙏😅💖</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        // This function will dynamically update the apology based on the mood input after the user clicks the button
+        function updateApology(event) {
+            event.preventDefault(); // Prevent page reload
+
+            var mood = document.getElementById('mood').value;
+            var apologyResult = document.getElementById('apologyResult');
+            var response = '';
+
+            // Check for keywords in the input to generate a corresponding apology
+            if (mood.includes('sad')) {
+                response = 'I can feel your sadness, please forgive me lavo, and let’s reconsider things up together! na Sweetheart 💖';
+            } else if (mood.includes('angry')) {
+                response = 'I know I messed up! Let me make it right with all my heart! 🙏';
+            } else if (mood.includes('happy')) {
+                response = 'I’m so glad you’re happy! I promise to keep it that way! 😄';
+            } else if (mood.includes('Frustrated')){
+                response = 'College me milu mai toh pakad ke koot do😭. Par yoon baat karna band mat karo Darling💖';
+            }
+            else{
+                response = 'Whatever it is, I’m truly sorry and I hope we can move past it. 💖';
+            }
+        
+
+            // Display the response dynamically after form submission
+            apologyResult.innerHTML = `<h3>Here’s Your Personalized Apology! 😘</h3><p class="apology-text">${response}</p><p class="closing-note">There you go, I hope this makes things better! If not, well, I’ll keep trying. 😅💖 You mean the world to me!</p>`;
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Oops! Did I Mess Up? 😅 Forgive Me? 😘💖</h1>
+    
+    <p class="intro-text">
+        Hey hi ,My Dear Lovely (Am i authorized to Address you with Suppu/Lovely, nahi hoga phir bhee bolunga, Sorry)
+        I didn’t mean to make things awkward, but now that I’ve realized how much I messed up, here I am, 
+        asking for your forgiveness with all my heart. Let’s make it right together! 😇💫, Tumhein kuch 
+        bolne me bhee dar hee lgta hai Lovely, haa mai beshram hoon kya karu, har baar bol deta hu baat nahi
+        karunga phir tere pass hee aa jata hu, tera silent naa mujhe gussa dila deta hai😭,Mai soachta hu ye ladki ko mere
+        se bhee baat karne mai soachna padta hai, Meri Galti nahi hai tum ho hee itni pyari❤️ that compel me to talk to you tujhe 
+        maanun, pyaar se batau baccha dekho baat aisa hai.....🥰
+        
+    </p>
+
+    <!-- Apology Generator Form -->
+    <form onsubmit="updateApology(event)">
+        <div class="form-group">
+            <label for="mood">How are you feeling? 😕</label>
+            <textarea id="mood" name="mood" rows="4" placeholder="Tell me what’s on your mind... 🙂.......sad/angary/Happy/Frustrated" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <!-- Button text changed to 'Generate My Heartfelt Apology 💖' -->
+            <button type="submit">Generate My Heartfelt Apology 💖</button>
+        </div>
+    </form>
+
+    <div id="apologyResult" class="apology-result">
+        <!-- This is where the dynamically generated apology will be shown -->
+    </div>
+
+    <footer>
+        <p>Sometimes, it’s just about the little things we do to make things right. ❤️</p>
+    </footer>
+</div>
+
+</body>
+</html>
